@@ -1,4 +1,4 @@
-module ArtfulDodgy where
+module Chapter07.ArtfulDodgy where
 
 dodgy x y = x + y * 10
 oneIsOne = dodgy 1

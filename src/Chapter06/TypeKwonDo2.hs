@@ -1,4 +1,4 @@
-module TypeKwonDo2 where
+module Chapter06.TypeKwonDo2 where
 
 chk :: Eq b => (a -> b) -> a -> b -> Bool
 chk aToB a b = (aToB a) == b

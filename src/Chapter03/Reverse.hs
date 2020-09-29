@@ -1,4 +1,4 @@
-module Reverse where
+module Chapter03.Reverse where
 
 rvrs :: String -> String
 rvrs input = c ++ " " ++ b ++ " " ++ a

@@ -1,4 +1,4 @@
-module GivenATypeWriteTheFunction where
+module Chapter05.GivenATypeWriteTheFunction where
 
 i :: a -> a
 i a = a

@@ -1,4 +1,4 @@
-module GuardDuty where
+module Chapter07.GuardDuty where
 
 avgGrade :: (Fractional a, Ord a) => a -> Char
 avgGrade x

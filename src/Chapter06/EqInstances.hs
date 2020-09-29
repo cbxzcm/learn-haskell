@@ -1,4 +1,4 @@
-module EqInstances where
+module Chapter06.EqInstances where
 
 data TisAnInteger = TisAn Integer deriving Show
 

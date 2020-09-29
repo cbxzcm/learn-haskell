@@ -2,9 +2,9 @@ module Chapter07.Exercises where
 
 tensDigit :: Integral a => a -> a
 tensDigit x = snd d
-	where
-		xLast = x `divMod` 100
-		d = (fst xLast) `divMod` 10
+    where
+        xLast = x `divMod` 100
+        d = (fst xLast) `divMod` 10
 
 foldBoolCase :: a -> a -> Bool -> a
 foldBoolCase x y b =

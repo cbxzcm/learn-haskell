@@ -1,4 +1,4 @@
-module Moods where
+module Chapter04.Moods where
 
 data Mood = Blah | Woot deriving Show
 

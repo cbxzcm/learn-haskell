@@ -1,6 +1,6 @@
 {-# LANGUAGE NoMonomorphismRestriction #-}
 
-module DetermineTheType where
+module Chapter05.DetermineTheType where
 
 --a = (* 9) 6
 --b = head [(0, "doge"), (1, "kitteh")]

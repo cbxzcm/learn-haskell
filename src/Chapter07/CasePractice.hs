@@ -1,4 +1,4 @@
-module CasePractice where
+module Chapter07.CasePractice where
 
 functionC x y = case x > y of
   True -> x

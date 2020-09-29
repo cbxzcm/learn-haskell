@@ -1,4 +1,4 @@
-module MatchTheTypes where
+module Chapter06.MatchTheTypes where
 
 import Data.List
 
