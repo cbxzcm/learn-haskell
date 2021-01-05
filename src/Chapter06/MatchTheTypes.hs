@@ -23,13 +23,13 @@ sigmund' :: Num a => a -> Int
 sigmund' x = myX
 
 jung :: [Int] -> Int
-jung xs = head (sort xs)
+jung = minimum
 
 young :: Ord a => [a] -> a
-young xs = head (sort xs)
+young = minimum
 
 mySort :: [Char] -> [Char]
 mySort = sort
 
-signifier :: [Char] -> Char 
+signifier :: [Char] -> Char
 signifier xs = head (mySort xs)

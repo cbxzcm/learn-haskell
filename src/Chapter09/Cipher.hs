@@ -9,10 +9,10 @@ fromCaesar :: String -> String
 fromCaesar = fmap decodeCaesar
 
 toBase :: Char -> Int
-toBase = (subtract $ ord 'a') . ord . toLower
+toBase = subtract (ord 'a') . ord . toLower
 
 fromBase :: Int -> Char
-fromBase = chr . (+ord 'a')
+fromBase = chr . (+ ord 'a')
 
 encodeCaesar :: Char -> Char
 encodeCaesar x = fromBase $ mod (3 + toBase x) 26

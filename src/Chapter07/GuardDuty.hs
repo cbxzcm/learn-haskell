@@ -7,13 +7,14 @@ avgGrade x
   | y >= 0.8 = 'B'
   | y >= 0.59 = 'D'
   | y < 0.59 = 'F'
-  where y = x / 100
+  where
+    y = x / 100
 
 pal xs
   | xs == reverse xs = True
   | otherwise = False
 
 numbers x
-  | x < 0 =  -1
+  | x < 0 = -1
   | x == 0 = 0
   | x > 0 = 1

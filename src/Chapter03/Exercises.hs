@@ -3,11 +3,11 @@ module Chapter03.Exercises where
 exclamation :: String -> String
 exclamation x = x ++ "!"
 
-get4 :: String -> Char 
+get4 :: String -> Char
 get4 x = x !! 4
 
 drop10 :: String -> String
-drop10 x = drop 10 x
+drop10 = drop 10
 
 thirdLetter :: String -> Char
 thirdLetter x = x !! 3

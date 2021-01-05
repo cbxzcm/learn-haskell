@@ -18,7 +18,7 @@ eftOrd GT EQ = [EQ, GT]
 eftOrd GT LT = [LT, GT]
 
 eftInt :: Int -> Int -> [Int]
-eftInt x y  
+eftInt x y
   | x < y = [x, y]
   | x > y = [y, x]
   | x == y = [x]
@@ -28,4 +28,3 @@ eftChar x y
   | x < y = [x, y]
   | x > y = [y, x]
   | x == y = [x]
-

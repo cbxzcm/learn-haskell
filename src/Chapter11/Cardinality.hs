@@ -8,10 +8,10 @@ data PugType = PugData
 -- Answer: 1
 
 -- 2. For this one, recall that Bool is also defined with the |:
-data Airline =
-    PapuAir |
-    CatapultsR'Us |
-    TakeYourChancesUnited
+data Airline
+  = PapuAir
+  | CatapultsR'Us
+  | TakeYourChancesUnited
 
 -- Answer: 3
 
@@ -22,10 +22,10 @@ data Airline =
 --    What can you say about the cardinality of those types?
 
 -- -9223372036854775808
---minBound :: Int 
+--minBound :: Int
 
 -- 9223372036854775807
---maxBound :: Int 
+--maxBound :: Int
 
 --minBound :: Integer -- No instance for (Bounded Integer
 --maxBound :: Integer -- No instance for (Bounded Integer)

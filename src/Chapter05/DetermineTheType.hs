@@ -10,6 +10,9 @@ module Chapter05.DetermineTheType where
 --f = (length [1, 2, 3, 4]) > (length "TACOCAT")
 
 x = "Julie"
+
 y = " <3"
+
 z = "Haskell"
+
 f = x ++ y ++ z

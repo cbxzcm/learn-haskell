@@ -1,14 +1,19 @@
 module Chapter11.DogTypes where
 
 data Trivial = Trivial'
-data UnaryTypeCon a = UnaryTYpeCon a
+
+newtype UnaryTypeCon a = UnaryTYpeCon a
+
 data PugType = PugData
+
 data HuskyType = HuskyData
-data DogueDeBordeaux doge = DogueDeBordeaux doge
-data Doggies a =
-    Husky a |
-    Mastiff a
-    deriving (Eq, Show)
+
+newtype DogueDeBordeaux doge = DogueDeBordeaux doge
+
+data Doggies a
+  = Husky a
+  | Mastiff a
+  deriving (Eq, Show)
 
 -- 1. Is Doggies a type constructor or a data constructor?
 -- Answer: Type constructor
@@ -31,11 +36,8 @@ data Doggies a =
 -- 7. Is DogueDeBordeaux a type constructor or a data constructor?
 -- Answer: It's the name of the type and data constructor
 
--- 8. What is the type of DogueDeBordeaux 
+-- 8. What is the type of DogueDeBordeaux
 -- Answer: DogueDeBordeaux :: doge -> DogueDeBordeaux doge
 
 -- 9. What is the type of DogueDeBordeaux "doggie!"
 -- Answer: DogueDeBordeaux "doggie!" :: DogueDeBordeaux [Char]
-
-
-

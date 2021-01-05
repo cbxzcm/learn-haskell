@@ -2,7 +2,7 @@ module Chapter10.RewritingFunctionsUsingFolds where
 
 -- 1. myOr returns True if any Bool in the list is True.
 myOr :: [Bool] -> Bool
-myOr = foldr (||) False
+myOr = or
 
 -- 2. myAny returns Ture if a -> Bool applied to any of the values in the list returns True.
 myAny :: (a -> Bool) -> [a] -> Bool
@@ -10,10 +10,10 @@ myAny f = myOr . map f
 
 -- 3. Write two versions of myElem. One version should use the folding and the other should use any.
 myElemFold :: Eq a => a -> [a] -> Bool
-myElemFold target list = foldr (\a b -> a == target || b) False list
+myElemFold target = foldr (\a b -> a == target || b) False
 
 myElemAny :: Eq a => a -> [a] -> Bool
-myElemAny target list = any (\x -> x == target) list
+myElemAny = elem
 
 -- 4. Implement myReverse, don't worry about trying to make it lazy
 myReverse :: [a] -> [a]
@@ -29,7 +29,7 @@ myFilter f = foldr (\a b -> if f a then a : b else b) []
 
 -- 7. squish flattens a list of lists into a list
 squish :: [[a]] -> [a]
-squish = foldr (\a b -> a ++ b) []
+squish = concat
 
 -- 8. squishMap maps a function over a list and concatenates the results
 squishMap :: (a -> [b]) -> [a] -> [b]
@@ -39,7 +39,7 @@ squishMap f = foldr (\a b -> f a ++ b) []
 squishAgain :: [[a]] -> [a]
 squishAgain = squishMap id
 
--- 10. myMaximumBy takes a parison function and a list and returns the greatest element of the 
+-- 10. myMaximumBy takes a parison function and a list and returns the greatest element of the
 -- list based on the last value that the comparison returned GT for.
 myMaximumBy :: (a -> a -> Ordering) -> [a] -> a
 myMaximumBy f (x : xs) = foldl (\a b -> if f a b == GT then a else b) x xs

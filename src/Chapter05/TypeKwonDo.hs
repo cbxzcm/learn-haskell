@@ -10,7 +10,9 @@ h :: Int -> Char
 h a = g $ f a
 
 data A
+
 data B
+
 data C
 
 q :: A -> B
@@ -20,10 +22,12 @@ w :: B -> C
 w = undefined
 
 e :: A -> C
-e a = w $ q a 
+e a = w $ q a
 
 data X
+
 data Y
+
 data Z
 
 xz :: X -> Z
@@ -35,8 +39,9 @@ yz = undefined
 xform :: (X, Y) -> (Z, Z)
 xform (a, b) = (xz a, yz b)
 
-munge :: (x -> y)
-      -> (y -> (w, z))
-      -> x
-      -> w
+munge ::
+  (x -> y) ->
+  (y -> (w, z)) ->
+  x ->
+  w
 munge xToY yToWZ x = fst $ yToWZ $ xToY x

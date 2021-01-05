@@ -22,4 +22,4 @@ a :: (a -> c) -> a -> a
 a _ a' = a'
 
 a' :: (a -> b) -> a -> b
-a' aToB a = aToB a
+a' aToB = aToB
