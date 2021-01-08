@@ -8,6 +8,8 @@ dependencies:
 - time == 1.8.0.2
 - random
 - split
+- hspec
+- QuickCheck
 
 library: 
   source-dirs: 
